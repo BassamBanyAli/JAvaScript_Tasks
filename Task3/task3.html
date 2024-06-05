@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        img{
+            width: 100%;
+        }
+
+        h1 { 
+            color: green; 
+        } 
+  
+        option { 
+            font-size: 1rem; 
+            /* font-family: 'Times New Roman', Times, serif; */
+        } 
+        #gfg{
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div id="task1" onmouseover="mOver()" onmouseout="mOut()" style="width: 200px;height: 50px;background-color: yellow;text-align: center;">
+        <h2>Hello World!</h2>
+
+    </div>
+    <br>
+    <br>
+    <div>
+        <select name="contries" id="select" onchange="ChangeValue(this)">
+            <option value="Jordan">Jordan</option>
+            <option value="Palestine">Palastene</option>
+            <option value="Syria">Syria</option>
+        </select>
+        <div id="image" style="width: 100px; height: 100px;">
+            <img src="Flag_of_Jordan.svg.png" alt="">
+
+            
+        </div>
+
+    </div>
+
+
+    <div style="display: flex;">
+        <select name="" id="font">
+            <option value="Fantasy">Fantasy</option>
+            <option value="Time New Roman">Time New Roman</option>
+        </select>
+        <select id="gfg1"> 
+            <option value="8px">8px</option> 
+            <option value="10px">10px</option> 
+            <option value="14px">14px</option> 
+            <option value="20px">20px</option> 
+            <option value="24px">24px</option> 
+        </select>
+        <input type="checkbox" id="Italic">
+        <label for="Italic">italic</label>
+        <input type="checkbox" id="Bold">
+        <label for="Bold">Bold</label>
+        <input type="checkbox" id="UnderLine">
+        <label for="UnderLine">UnderLine</label>
+    </div>
+    <div id="gfg"> 
+        <h1>Welcome To Geeksforgeeks!!</h1> 
+        <p> 
+            A Computer Science portal for geeks. 
+            It contains well written,well thought 
+            and well explained computer 
+            science and programming articles. 
+        </p> 
+    </div> 
+
+    <script src="task3.js"></script>
+</body>
+</html>
