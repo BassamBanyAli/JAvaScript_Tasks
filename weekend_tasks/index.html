@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #index{
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        select {
+            background-color: white !important;
+            font-size: 15px !important;
+            background: url('5083118.png') no-repeat right #ddd;
+            background-position: 98%;
+            padding: 2px 20px 2px 8px;
+            padding-right: 20px;
+            background-size: 20px;
+            -webkit-appearance: none;
+            outline: none !important;
+            border: 1px  solid #cccccc;
+}
+#gfg{
+            border: 1px solid black;
+        }
+        .error{
+            color: red;
+        }
+        #confirmPassword{
+            position: absolute;
+            left: 185px;
+        }
+        #message2{
+            position: absolute;
+            left: 360px;
+        }
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f2f2f2;
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+    </style>
+</head>
+<body>
+    <div id="index" onclick="change_background()">
+
+    </div>
+    <br>
+    <hr>
+    <!-- Exercise #3 (3): Changing images -->
+     
+    <div>
+        <p>
+        <select name="" id="list" onchange="list_image()">
+            <option value="no-image.png" name=""no_image>select</option>
+            <option value="Flag-of-Palestine.jpg" name="palastene">Palastene</option>
+            <option value="Jordanian-flag.jpg" name=""jordan>Jordan</option>
+            <option value="images.png"name="barazil">Barazil</option>
+        </select>
+    </p>
+        <div id="image">
+
+        </div>
+
+
+        <br>
+        <hr>
+
+    </div>
+    <div style="display: flex;">
+        <select name="" id="font">
+            <option value="Fantasy">Fantasy</option>
+            <option value="Time New Roman">Time New Roman</option>
+        </select>
+        <select id="gfg1"> 
+            <option value="8px">8px</option> 
+            <option value="10px">10px</option> 
+            <option value="14px">14px</option> 
+            <option value="20px">20px</option> 
+            <option value="24px">24px</option> 
+        </select>
+        <input type="checkbox" id="Italic">
+        <label for="Italic">italic</label>
+        <input type="checkbox" id="Bold">
+        <label for="Bold">Bold</label>
+        <input type="checkbox" id="UnderLine">
+        <label for="UnderLine">UnderLine</label>
+    </div>
+    <div id="gfg"> 
+        <h1>Welcome To Geeksforgeeks!!</h1> 
+        <p> 
+            A Computer Science portal for geeks. 
+            It contains well written,well thought 
+            and well explained computer 
+            science and programming articles. 
+        </p> 
+    </div> 
+    <br>
+    <hr>
+    <div style="display: flex;">
+        <form id="passwordForm">
+            <div style="display: flex;">
+            <label for="password">Password(min 6 characters)</label>
+            <input type="password" id="password" name="password" required>
+            <span id="message1" class="error"></span>
+        </div>
+            <br>
+            <div style="display: flex;">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" id="confirmPassword" name="confirmPassword" required>
+            <span id="message2" class="error"></span>
+        </div>
+            <br>
+            <br>
+            <button type="submit" id="submit" style="display: none;">Submit</button>
+        </form>
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+    <h2>My Playlist</h2>
+    <input type="text" id="songInput" placeholder="Enter song name">
+    <button onclick="addSong()">Add Song</button>
+    
+    <ul id="playlist"></ul>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+    
+
+
+    <script src="index.js"></script>
+</body>
+</html>
