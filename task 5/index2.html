@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Form</title>
+</head>
+<body>
+    <h2>Contact Us</h2>
+    <form id="contactForm">
+         <div style="display: flex;">
+        <label for="name">Name:</label><br>
+        <input type="text" id="name" name="name" required><br><br>
+    </div>
+    <br>
+
+    <div style="display: flex;">
+        <label for="age">Age:</label><br>
+        <input type="age" id="age" name="age" required><br><br>
+        </div>
+<br>
+
+        <div style="display: flex;">
+            <label for="gender">Gender:</label><br>
+            <input type="gender" id="gender" name="gender" required><br><br>
+            </div>
+    <br>
+    <div style="display: flex;">
+        <label for="your image">Your Image:</label><br>
+        <input type="your image" id="your image" name="your image" required><br><br>
+        </div>
+        <br>
+        
+    <div style="display: flex;">
+        <label for="birthdate">Birthdate:</label><br>
+        <input type="date" id="birthdate" name="birthdate" required><br><br>
+           </div>
+
+        <hr>
+
+        <div style="display: flex;">
+            <label for="description">Description:</label><br>
+            <input type="description" id="description" name="description" required><br><br>
+            </div>
+    <br>
+
+            <div style="display: flex;">
+            <label for="major & university">major & university:</label><br>
+            <input type="major & university" id="major & university" name="major & university" required><br><br>
+            </div>
+    <br>
+             <div style="display: flex;">
+            <label>programming language:</label><br>
+        
+        <div style="display: flex;">
+            <input type="checkbox" id="html" name="programming language" value="html">
+        
+            <label for="programming language 1">html</label><br>
+        </div>
+            <input type="checkbox" id="css" name="programming language" value="css">
+        
+            <label for="programming language 2">css</label><br>
+            <div style="display: flex;"></div>
+            <input type="checkbox" id="javascript" name="programming language" value="javascript">
+            <label for="programming language 3">javascript</label><br>
+        </div>
+    </div>
+    <br>
+    <hr>
+
+    <div style="display: flex;">
+
+        <label for="siblings number">siblings number:</label><br>
+        <input type="siblings number" id="siblings number" name="siblings number" required><br><br>
+        </div>
+<br>
+
+
+<div style="display: flex;">
+
+    <label for="description of siblings">description of siblings:</label><br>
+    <input type="description of siblings" id="description of siblings" name="description of siblings" required><br><br>
+    </div>
+<br>
+    
+
+
+        <input type="submit" value="Submit">
+    </form>
+    <script>
+
+window.addEventListener('beforeunload', function(event) {
+    localStorage.clear();
+});
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form submission
+            
+            const formData = new FormData(this);
+            
+            const plainFormData = Object.fromEntries(formData.entries());
+            
+            localStorage.setItem('formData', JSON.stringify(plainFormData));
+            
+            console.log('Form data stored in local storage:', plainFormData);
+        });
+        window.addEventListener('load', function() {
+            const htmlCheckbox = document.getElementById('html');
+            const cssCheckbox = document.getElementById('css');
+            const javascriptCheckbox = document.getElementById('javascript');
+            
+        });
+
+
+    </script>
+</body>
+</html>

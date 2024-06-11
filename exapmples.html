@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div id="result"></div>
+
+<p><button onclick="clickCounter()" type="button">Click me!</button></p>
+<div id="result"></div>
+<p>Click the button to see the counter increase.</p>
+<p>Close the browser tab (or window), and try again, and the counter will continue to count (is not reset).</p>
+
+
+<script>
+// Check browser support
+if (typeof(Storage) !== "undefined") {
+  // Store
+  localStorage.setItem("lastname", "Smith");
+  // Retrieve
+  document.getElementById("result").innerHTML = localStorage.getItem("lastname");
+} else {
+  document.getElementById("result").innerHTML = "Sorry, your browser does not support Web Storage...";
+}
+
+// Store
+localStorage.lastname = "Smith";
+// Retrieve
+document.getElementById("result").innerHTML = localStorage.lastname;
+//remove
+localStorage.removeItem("lastname");
+//example 2
+function clickCounter() {
+  if (typeof(Storage) !== "undefined") {
+    if (localStorage.clickcount) {
+      localStorage.clickcount = Number(localStorage.clickcount)+1;
+    } else {
+      localStorage.clickcount = 1;
+    }
+    document.getElementById("result").innerHTML = "You have clicked the button " + localStorage.clickcount + " time(s).";
+  } else {
+    document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+  }
+}
+
+
+
+
+// Storing data
+localStorage.setItem('username', 'JohnDoe');
+
+// Retrieving data
+let username = localStorage.getItem('username');
+console.log(username); // Outputs: JohnDoe
+
+
+
+// Storing data
+sessionStorage.setItem('sessionID', '12345');
+
+// Retrieving data
+let sessionID = sessionStorage.getItem('sessionID');
+console.log(sessionID); // Outputs: 12345
+
+
+
+
+</script>
+
+</body>
+</html>
