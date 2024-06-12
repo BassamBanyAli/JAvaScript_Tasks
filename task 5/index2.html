@@ -98,17 +98,19 @@ window.addEventListener('beforeunload', function(event) {
             const formData = new FormData(this);
             
             const plainFormData = Object.fromEntries(formData.entries());
+              // Handle checkboxes separately
+              const checkboxes = document.querySelectorAll('input[name="programming language"]:checked');
+              console.log(checkboxes);
+            const checkedValues = Array.from(checkboxes).map(cb => cb.value);
+            console.log(checkedValues);
+
+            plainFormData['programming language'] = checkedValues;
             
             localStorage.setItem('formData', JSON.stringify(plainFormData));
             
             console.log('Form data stored in local storage:', plainFormData);
         });
-        window.addEventListener('load', function() {
-            const htmlCheckbox = document.getElementById('html');
-            const cssCheckbox = document.getElementById('css');
-            const javascriptCheckbox = document.getElementById('javascript');
-            
-        });
+
 
 
     </script>
